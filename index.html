@@ -3,7 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <title>じゃんけんゲーム</title>
   </head>
-  <body></body>
+  <body>
+    <div id="app">
+      <!-- 自分の手 -->
+      <button @click="fight('グー')">グー</button>
+      <button @click="fight('チョキ')">チョキ</button>
+      <button @click="fight('パー')">パー</button>
+
+      <!-- 敵の手 -->
+      <p>{{ enemyHand }}</p>
+
+      <!-- 結果 -->
+      <p>{{ result }}</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+  </body>
 </html>
